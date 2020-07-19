@@ -1,6 +1,6 @@
-# Salesforce App
+# Contact Tracing App
 
-This guide helps Salesforce developers who are new to Visual Studio Code go from zero to a deployed app using Salesforce Extensions for VS Code and Salesforce CLI.
+Sample Contact Tracing app built on Salesforce Platform. This application is part of my course "[Salesforce Apex Development](https://www.udemy.com/course/salesforce-development)". Enroll now to get access to detailed explaination.
 
 ## Part 1: Choosing a Development Model
 
