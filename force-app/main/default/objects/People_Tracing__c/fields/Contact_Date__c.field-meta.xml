@@ -3,7 +3,7 @@
     <fullName>Contact_Date__c</fullName>
     <externalId>false</externalId>
     <label>Contact Date</label>
-    <required>true</required>
+    <required>false</required>
     <trackTrending>false</trackTrending>
     <type>Date</type>
 </CustomField>
