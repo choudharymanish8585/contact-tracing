@@ -5,7 +5,7 @@
         <visible>true</visible>
     </applicationVisibilities>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Location__c.Red_Score__c</field>
         <readable>true</readable>
     </fieldPermissions>
