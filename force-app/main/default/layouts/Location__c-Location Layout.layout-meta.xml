@@ -16,7 +16,7 @@
                 <field>Pincode__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
+                <behavior>Edit</behavior>
                 <field>Red_Score__c</field>
             </layoutItems>
         </layoutColumns>
