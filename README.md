@@ -4,24 +4,26 @@ Sample Contact Tracing app built on Salesforce Platform. This application is par
 
 > "ONE COURSE TO RULE THEM ALL"
 
-The course is designed for all experience levels and covers Apex Development from basics (and I really mean it) with Lightning front-end development. The course is filled with many challenges and real-time projects to help you build that muscle memory and make you a proficient Salesforce Developer. 
+The course is designed for all experience levels and covers Apex Development from basics (and I really mean it) with Lightning front-end development. The course is filled with many challenges and real-time projects to help you build that muscle memory and make you a proficient Salesforce Developer.
 
 ##### It's impossible to highlight all offering of this course here, but below are some major modules:
 
-- Web Application Architecture
-- Programming Fundamentals
-- Apex Development
-- Async Apex
-- Salesforce Lightning Development with Aura
-- SOQL - Salesforce Object Query Language
-- SOSL - Salesforce Object Search Language
-- Database Manipulation
-- Object-Oriented Programming System
+-   Web Application Architecture
+-   Programming Fundamentals
+-   Apex Development
+-   Async Apex
+-   Salesforce Lightning Development with Aura
+-   SOQL - Salesforce Object Query Language
+-   SOSL - Salesforce Object Search Language
+-   Database Manipulation
+-   Object-Oriented Programming System
 
 ## Install Object Schema
+
 **Make sure you have "git" and Salesoforce CLI installed in your system. Follow below steps to upload object schema along with permission set in your Salesforce Org.**
-- Clone "schema-metadata" branch from this git repo `git clone --branch schema-metadata https://github.com/choudharymanish8585/contact-tracing.git`
-- Open Terminal/Command Prompt and navigate to above folder
-- Authorize your Salesforce Org `sfdx force:auth:web:login -a TestOrg1`
-- Deploy all metadata to your Salesforce Org `sfdx force:source:deploy -p force-app/main/default/`
-- Assign permission set to current user `sfdx force:user:permset:assign -n Health_Admin`
+
+-   Clone "schema-metadata" branch from this git repo `git clone --branch schema-metadata https://github.com/choudharymanish8585/contact-tracing.git`
+-   Open Terminal/Command Prompt and navigate to above folder
+-   Authorize your Salesforce Org `sfdx force:auth:web:login -a TestOrg1`
+-   Deploy all metadata to your Salesforce Org `sfdx force:source:deploy -p force-app/main/default/`
+-   Assign permission set to current user `sfdx force:user:permset:assign -n Health_Admin`
