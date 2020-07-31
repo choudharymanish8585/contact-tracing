@@ -1,0 +1,47 @@
+<aura:component implements="force:appHostable">
+    <aura:attribute name="scope" type="String" default="person" />
+    <aura:attribute name="headerTitle" type="String" default="Person View" />
+
+    <!--PERSON TABLE ATTRIBUTES-->
+    <aura:attribute name="personTableColumn" type="List" />
+    <!--LOCATION TABLE ATTRIBUTES-->
+    <aura:attribute name="locationTableColumn" type="List" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <div class="main-container">
+        <lightning:layout multipleRows="true">
+            <!--HEADER-->
+            <lightning:layoutItem size="12">
+                <c:CTHealthHeader aura:id="health-header" scope="{!v.scope}" headerTitle="{!v.headerTitle}" />
+            </lightning:layoutItem>
+            <!--VERTICAL TABS-->
+            <lightning:layoutItem size="12">
+                <lightning:tabset variant="vertical" onselect="{! c.tabSelectHandler }">
+                    <!--PERSON VIEW-->
+                    <lightning:tab label="Person View" id="person">
+                        <lightning:layout>
+                            <lightning:layoutItem size="8" padding="horizontal-small">
+                                <c:CTRecentChanges scope="person" columns="{!v.personTableColumn}" />
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="4">
+                                <c:CTPersonView />
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                    </lightning:tab>
+                    <!--LOCATION VIEW-->
+                    <lightning:tab label="Location View" id="location">
+                        <lightning:layout>
+                            <lightning:layoutItem size="8" padding="horizontal-small">
+                                <c:CTRecentChanges scope="location" columns="{!v.locationTableColumn}" />
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="4">
+                                <c:CTLocationView />
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                    </lightning:tab>
+                </lightning:tabset>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+</aura:component>

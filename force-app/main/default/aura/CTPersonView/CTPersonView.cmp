@@ -1,0 +1,22 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" controller="CTPersonViewController">
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="status" type="String" />
+    <aura:attribute name="fields" type="String[]" default="['Name','Mobile__c','Token__c', 'Health_Status__c', 'Status_Update_Date__c']" />
+    <!--Handling person select application event-->
+    <aura:handler event="c:PersonSelectEvent" action="{!c.personSelect}" />
+
+    <aura:if isTrue="{! !empty(v.recordId)}">
+        <div class="{!v.status + ' person-card'}">
+            <lightning:layout multipleRows="true" class="backgorund">
+                <lightning:layoutItem size="12" padding="around-small">
+                    <lightning:recordForm recordId="{!v.recordId}" objectApiName="Person__c" fields="{!v.fields}" mode="readonly" columns="1" />
+                </lightning:layoutItem>
+                <aura:if isTrue="{! v.status != 'Red'}">
+                    <lightning:layoutItem size="12" padding="around-small">
+                        <lightning:button label="UPDATE STATUS TO RED" variant="destructive" title="UPDATE STATUS TO RED" onclick="{! c.updateStatus }" />
+                    </lightning:layoutItem>
+                </aura:if>
+            </lightning:layout>
+        </div>
+    </aura:if>
+</aura:component>
