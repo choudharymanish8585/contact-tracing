@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <applicationVisibilities>
         <application>Contact_Tracing</application>
@@ -20,13 +20,13 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>People_Tracing__c.Contact_Type__c</field>
-        <readable>true</readable>
+        <editable>false</editable>
+        <field>People_Tracing__c.Contact_Date__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>People_Tracing__c.Person_1__c</field>
+        <field>People_Tracing__c.Contact_Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -83,7 +83,15 @@
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <tabSettings>
+        <tab>Health_Admin</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
         <tab>Location_Tracing__c</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>Location_View</tab>
         <visibility>Visible</visibility>
     </tabSettings>
     <tabSettings>
@@ -96,6 +104,10 @@
     </tabSettings>
     <tabSettings>
         <tab>Person__c</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>User_View</tab>
         <visibility>Visible</visibility>
     </tabSettings>
 </PermissionSet>
