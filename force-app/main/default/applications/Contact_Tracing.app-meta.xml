@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
     <brand>
         <headerColor>#0070D2</headerColor>
@@ -10,6 +10,9 @@
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <label>Contact Tracing</label>
     <navType>Standard</navType>
+    <tabs>Health_Admin</tabs>
+    <tabs>User_View</tabs>
+    <tabs>Location_View</tabs>
     <tabs>Person__c</tabs>
     <tabs>Location__c</tabs>
     <tabs>People_Tracing__c</tabs>
