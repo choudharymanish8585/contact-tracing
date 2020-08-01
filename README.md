@@ -12,7 +12,7 @@ The course is designed for all experience levels and covers Apex Development fro
 -   Programming Fundamentals
 -   Apex Development
 -   Async Apex
--   Salesforce Lightning Development with Aura
+-   Aura Framework Development
 -   SOQL - Salesforce Object Query Language
 -   SOSL - Salesforce Object Search Language
 -   Database Manipulation
