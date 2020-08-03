@@ -87,7 +87,6 @@ public with sharing class CTLocationController {
             FROM Location__c
             WHERE Id = :locationId
             ORDER BY Status_Update_Date__c DESC NULLS LAST
-            LIMIT 100
         ];
         if (locations != null && locations.size() > 0) {
             return locations[0];
