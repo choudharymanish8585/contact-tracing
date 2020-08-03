@@ -46,13 +46,7 @@ public with sharing class CTPersonController {
      * @return Person__c
      */
     public static Person__c getPersonById(String personId) {
-        List<Person__c> people = [
-            SELECT Id, Name, Mobile__c, Token__c, Health_Status__c, Status_Update_Date__c
-            FROM Person__c
-            WHERE Id = :personId
-            ORDER BY Status_Update_Date__c DESC NULLS LAST
-            LIMIT 100
-        ];
+        List<Person__c> people = [SELECT Id, Name, Mobile__c, Token__c, Health_Status__c, Status_Update_Date__c FROM Person__c WHERE Id = :personId ORDER BY Status_Update_Date__c DESC NULLS LAST];
         if (people != null && people.size() > 0) {
             return people[0];
         }

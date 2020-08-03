@@ -29,11 +29,16 @@ public with sharing class CTPeopleTracingController {
      * Check duplicate People Tracing records
      * for multiple combinations
      * NOTE: THIS METHOD IS OPTIMIZED FOR BULK OPERATIONS
-     * @param peopleTraces List of people tracing record
      * @param recordIds set of record ids
      * @return boolean
      */
-    public static List<People_Tracing__c> checkDuplicates(List<People_Tracing__c> peopleTraces, Set<Id> recordIds) {
+    public static List<People_Tracing__c> checkDuplicates(List<People_Tracing__c> peopleTraces) {
+        // unique records ids
+        Set<Id> recordIds = new Set<Id>();
+        for (People_Tracing__c trace : peopleTraces) {
+            recordIds.add(trace.Person_1__c);
+            recordIds.add(trace.Person_2__c);
+        }
         //list of duplicate records
         List<People_Tracing__c> duplicates = new List<People_Tracing__c>();
         // map of existing records to match
