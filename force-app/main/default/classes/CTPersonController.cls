@@ -97,12 +97,12 @@ public with sharing class CTPersonController {
         Set<Id> cohabitants = new Set<Id>();
         for (People_Tracing__c pt : peopleTraces) {
             // if both person 1 and person 2 already exist in positive people list, do nothing
-            // else add the other person to cohabitants
-            if (!idsToIgnore.contains(pt.Person_1__c) && idsToIgnore.contains(pt.Person_2__c)) {
+            // else add the person to cohabitants
+            if (!idsToIgnore.contains(pt.Person_1__c)) {
                 // add person 1
                 cohabitants.add(pt.Person_1__c);
                 idsToIgnore.add(pt.Person_1__c);
-            } else if (idsToIgnore.contains(pt.Person_1__c) && !idsToIgnore.contains(pt.Person_2__c)) {
+            } else if (idsToIgnore.contains(pt.Person_1__c)) {
                 // add person 2
                 cohabitants.add(pt.Person_2__c);
                 idsToIgnore.add(pt.Person_2__c);
@@ -133,12 +133,12 @@ public with sharing class CTPersonController {
         Set<Id> neighbours = new Set<Id>();
         for (People_Tracing__c pt : peopleTraces) {
             // if both person 1 and person 2 already exist in positive people list, do nothing
-            // else add the other person to neighbours
-            if (!idsToIgnore.contains(pt.Person_1__c) && idsToIgnore.contains(pt.Person_2__c)) {
+            // else add the person to neighbours
+            if (!idsToIgnore.contains(pt.Person_1__c)) {
                 // add person 1
                 neighbours.add(pt.Person_1__c);
                 idsToIgnore.add(pt.Person_1__c);
-            } else if (idsToIgnore.contains(pt.Person_1__c) && !idsToIgnore.contains(pt.Person_2__c)) {
+            } else if (idsToIgnore.contains(pt.Person_1__c)) {
                 // add person 2
                 neighbours.add(pt.Person_2__c);
                 idsToIgnore.add(pt.Person_2__c);
@@ -172,12 +172,12 @@ public with sharing class CTPersonController {
         Set<Id> primaryContacts = new Set<Id>();
         for (People_Tracing__c pt : peopleTraces) {
             // if both person 1 and person 2 already exist in already processed list, do nothing
-            // else add the other person to primary contacts set
-            if (!idsToIgnore.contains(pt.Person_1__c) && idsToIgnore.contains(pt.Person_2__c)) {
+            // else add the person to primary contacts set
+            if (!idsToIgnore.contains(pt.Person_1__c)) {
                 // add person 1
                 primaryContacts.add(pt.Person_1__c);
                 idsToIgnore.add(pt.Person_1__c);
-            } else if (idsToIgnore.contains(pt.Person_1__c) && !idsToIgnore.contains(pt.Person_2__c)) {
+            } else if (idsToIgnore.contains(pt.Person_1__c)) {
                 // add person 2
                 primaryContacts.add(pt.Person_2__c);
                 idsToIgnore.add(pt.Person_2__c);
@@ -209,12 +209,12 @@ public with sharing class CTPersonController {
         Set<Id> secondaryContacts = new Set<Id>();
         for (People_Tracing__c pt : peopleTraces) {
             // if both person 1 and person 2 already exist in already processed list, do nothing
-            // else add the other person to secondary contacts set
-            if (!idsToIgnore.contains(pt.Person_1__c) && idsToIgnore.contains(pt.Person_2__c)) {
+            // else add the person to secondary contacts set
+            if (!idsToIgnore.contains(pt.Person_1__c)) {
                 // add person 1
                 secondaryContacts.add(pt.Person_1__c);
                 idsToIgnore.add(pt.Person_1__c);
-            } else if (idsToIgnore.contains(pt.Person_1__c) && !idsToIgnore.contains(pt.Person_2__c)) {
+            } else if (idsToIgnore.contains(pt.Person_1__c)) {
                 // add person 2
                 secondaryContacts.add(pt.Person_2__c);
                 idsToIgnore.add(pt.Person_2__c);
