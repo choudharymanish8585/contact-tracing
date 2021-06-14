@@ -1,3 +1,13 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 06-15-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author                               Modification
+  1.0   06-15-2021   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
+-->
 <aura:component controller="CTLocationTabController" implements="force:appHostable">
     <aura:attribute name="recordId" type="String" />
     <aura:attribute name="locationInfo" type="Object" />
@@ -25,7 +35,7 @@
                                     Pincode
                                 </div>
                                 <div class="row-item-value">
-                                    {!v.locationInfo.pincode}
+                                    {!v.locationInfo.pinCode}
                                 </div>
                             </div>
                             <div class="row-item">
