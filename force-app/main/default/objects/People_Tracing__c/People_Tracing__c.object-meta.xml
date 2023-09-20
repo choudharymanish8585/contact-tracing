@@ -160,7 +160,7 @@
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>People Tracing</pluralLabel>
-    <searchLayouts/>
+    <searchLayouts></searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>
